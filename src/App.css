@@ -38,6 +38,7 @@ body {
 img {
   justify-content: center;
   justify-items: center;
+  text-align: center;
   border: solid 1px;
 }
 
@@ -50,4 +51,7 @@ input{
 
 .random-btn-container{
   margin: 20px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
 }

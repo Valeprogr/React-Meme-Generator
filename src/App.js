@@ -10,9 +10,8 @@ function App() {
   const [inputText, setInputText] = useState({
     top: "",
     bottom: ""
-  }
-
-  )
+  })
+  const [memeNum, setMemeNum] = useState(0)
   const url = 'https://api.imgflip.com/get_memes';
 
   useEffect(() => {
@@ -30,7 +29,9 @@ function App() {
   }, [])
 
 
-  let randomNum = Math.floor(Math.random() * 100);
+  const randomNum = () => {
+    setMemeNum(Math.floor(Math.random() * 100));
+  }
 
   const handleChange = (e) => {
     const keyName = e.target.id;
@@ -47,13 +48,13 @@ function App() {
       <h1 className='text-center'>Meme generator!</h1>
       <h5 className="card-title text-center">Create your Meme</h5>
       <p className="card-text text-center">Create your customized meme with the best image around internet</p>
-      <button className='btn btn-info text-center'>Random Meme</button>
+      <button onClick={randomNum} className='btn btn-info random-btn-container'>Random Meme</button>
 
       <div className='memePhoto card'>
         {meme ?
           <div className='memeFotoContainer'>
             <p id='top-p'>{inputText.top}</p>
-            <img className='img-fluid' src={meme.data.memes[0].url} alt='meme' />
+            <img className='img-fluid' src={meme.data.memes[memeNum].url} alt='meme' />
             <p id='bottom-p'>{inputText.bottom}</p>
           </div>
 
