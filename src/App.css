@@ -1,24 +1,53 @@
 body {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
   color: #61dafb;
+  justify-content: center;
 }
+
 .memePhoto{
   display: flex;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-items: center;
-}
-img {
+  width: 800px;
+  height: 800px;
   
+}
+.memeFotoContainer{
+  position: relative;
+  display: flex;
+  color: white;
+  font-size: 50px;
+}
+ #top-p {
+  position: absolute;
+  font-family: impact;
+  margin: 5px auto;
+}
+#bottom-p{
+  position: absolute;
+  font-family: impact;
+  margin: 5px auto;
+  bottom: 10px;
+}
+
+img {
   justify-content: center;
   justify-items: center;
-  height: 400px;
-  width: 400px;
-}
-
-button{
-  
+  border: solid 1px;
 }
 
 
+
+input{
+  width: 100px;
+  margin: 40px;
+}
+
+.random-btn-container{
+  margin: 20px;
+}
