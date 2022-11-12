@@ -48,7 +48,7 @@ function App() {
       <h1 className='text-center'>Meme generator!</h1>
       <h5 className="card-title text-center">Create your Meme</h5>
       <p className="card-text text-center">Create your customized meme with the best image around internet</p>
-      <button onClick={randomNum} className='btn btn-info random-btn-container'>Random Meme</button>
+      
 
       <div className='memePhoto card'>
         {meme ?
@@ -62,11 +62,19 @@ function App() {
           <p>Error 404</p>
 
         }
-
+        <div className='box-grande'>
+          <div className="box-piccolo uno">
         <input id='top' onChange={handleChange} type="text" class="form-control" placeholder="write here the top text" aria-label="Example text with button addon" aria-describedby="button-addon1" />
         <input id='bottom' onChange={handleChange} type="text" class="form-control" placeholder="write here the bottom text" aria-label="Example text with button addon" aria-describedby="button-addon1" />
         <button className='btn btn-info'>Save</button>
+          </div>
 
+          <div className='box-piccolo due'>
+          <input class="form-control" type="file" id="inputFile" multiple />
+          <button class="btn btn-info" type="button" id="inputFileUpload ">Upload</button>
+          </div>
+          </div>
+          <button onClick={randomNum} className='btn btn-info random-btn-container'>Random Meme</button>
       </div>
     </div>
   )
