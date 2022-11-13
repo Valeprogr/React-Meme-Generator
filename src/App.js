@@ -50,7 +50,7 @@ function App() {
       <h1 className='text-center'>Meme generator!</h1>
       <h5 className="card-title text-center">Create your Meme</h5>
       <p className="card-text text-center">Create your customized meme with the best image around internet</p>
-      
+      <button onClick={randomNum} className='btn btn-info random-btn-container'>Random Meme</button>
 
       <div className='memePhoto card'>
         {meme ?
@@ -59,7 +59,7 @@ function App() {
             <img className='img-fluid' src={meme.data.memes[memeNum].url} alt='meme' />
             <p id='bottom-p'>{inputText.bottom}</p>
           </div>
-
+            
           :
           <p>Error 404</p>
 
@@ -72,11 +72,10 @@ function App() {
           </div>
 
           <div className='box-piccolo due'>
-          <input className="form-control" type="file" id="inputFile" multiple />
-          <button className="btn btn-info" type="button" id="inputFileUpload ">Upload</button>
+          <h5>Edit your image and make a meme</h5>
+          <button className='btn btn-info'>Upload Your image</button>
           </div>
           </div>
-          <button onClick={randomNum} className='btn btn-info random-btn-container'>Random Meme</button>
       </div>
     </div>
   )

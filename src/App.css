@@ -60,6 +60,7 @@ input{
 
 .box-grande{
   display: flex;
+  flex-direction: column;
   border: 2px solid gainsboro;
   margin: 32px;
 
