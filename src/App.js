@@ -43,6 +43,8 @@ function App() {
   //  let mappingMeme = meme.data.memes.map((meme)=>
   //   <img src={meme.url} alt='meme'/> )
 
+
+
   return (
     <div className='container-fluid'>
       <h1 className='text-center'>Meme generator!</h1>
@@ -64,14 +66,14 @@ function App() {
         }
         <div className='box-grande'>
           <div className="box-piccolo uno">
-        <input id='top' onChange={handleChange} type="text" class="form-control" placeholder="write here the top text" aria-label="Example text with button addon" aria-describedby="button-addon1" />
-        <input id='bottom' onChange={handleChange} type="text" class="form-control" placeholder="write here the bottom text" aria-label="Example text with button addon" aria-describedby="button-addon1" />
+        <input id='top' onChange={handleChange} type="text" className="form-control" placeholder="write here the top text" aria-label="Example text with button addon" aria-describedby="button-addon1" />
+        <input id='bottom' onChange={handleChange} type="text" className="form-control" placeholder="write here the bottom text" aria-label="Example text with button addon" aria-describedby="button-addon1" />
         <button className='btn btn-info'>Save</button>
           </div>
 
           <div className='box-piccolo due'>
-          <input class="form-control" type="file" id="inputFile" multiple />
-          <button class="btn btn-info" type="button" id="inputFileUpload ">Upload</button>
+          <input className="form-control" type="file" id="inputFile" multiple />
+          <button className="btn btn-info" type="button" id="inputFileUpload ">Upload</button>
           </div>
           </div>
           <button onClick={randomNum} className='btn btn-info random-btn-container'>Random Meme</button>
